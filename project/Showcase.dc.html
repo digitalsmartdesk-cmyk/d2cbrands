@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: #f7f5f0; font-family: 'DM Sans', sans-serif; color: #1a1a1a; }
+    a { color: inherit; text-decoration: none; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+    }
+  </style>
+</helmet>
+
+<!-- NAV -->
+<nav style="position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.07); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 64px;">
+  <img src="uploads/GO.jpg" alt="Growth Originator" style="height: 36px; object-fit: contain;" />
+  <div style="display: flex; align-items: center; gap: 32px;">
+    <a href="#portfolio" style="font-size: 13px; font-weight: 500; color: #555; letter-spacing: 0.02em;">Our Brands</a>
+    <a href="#cta" style="font-size: 13px; font-weight: 600; background: #5a9a2e; color: #fff; padding: 8px 20px; border-radius: 100px; letter-spacing: 0.02em;">Connect With Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height: 88vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 48px 60px; position: relative; overflow: hidden;">
+  <!-- background texture rings -->
+  <div style="position: absolute; inset: 0; pointer-events: none;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 700px; height: 700px; border-radius: 50%; border: 1px solid rgba(90,154,46,0.10);"></div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 900px; height: 900px; border-radius: 50%; border: 1px solid rgba(90,154,46,0.06);"></div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; border-radius: 50%; border: 1px solid rgba(90,154,46,0.14);"></div>
+  </div>
+
+  <div style="animation: fadeUp 0.8s ease both; position: relative;">
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(90,154,46,0.10); border: 1px solid rgba(90,154,46,0.2); color: #3d7a14; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-bottom: 32px;">
+      <span style="width: 6px; height: 6px; border-radius: 50%; background: #5a9a2e; animation: pulse-dot 2s ease infinite;"></span>
+      Investor Portfolio · 2025
+    </div>
+    <h1 style="font-family: 'DM Serif Display', serif; font-size: clamp(42px, 6vw, 80px); line-height: 1.08; color: #111; max-width: 780px; margin: 0 auto 28px; letter-spacing: -0.02em;">
+      Six brands.<br /><em style="color: #5a9a2e;">One mission.</em><br />India's food future.
+    </h1>
+    <p style="font-size: 18px; font-weight: 300; color: #555; max-width: 520px; margin: 0 auto 44px; line-height: 1.65;">
+      Growth Originator builds and scales consumer food brands rooted in purity, nutrition, and modern Indian taste.
+    </p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+      <a href="#portfolio" style="display: inline-flex; align-items: center; gap: 8px; background: #1a1a1a; color: #fff; font-size: 14px; font-weight: 500; padding: 14px 28px; border-radius: 100px; letter-spacing: 0.01em;">
+        Explore Portfolio
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#cta" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #1a1a1a; font-size: 14px; font-weight: 500; padding: 14px 28px; border-radius: 100px; border: 1.5px solid rgba(0,0,0,0.15);">
+        Connect With Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section style="background: #1a1a1a; padding: 40px 48px;">
+  <div style="max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center;">
+    <div>
+      <div style="font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff; line-height: 1;">6</div>
+      <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 6px; letter-spacing: 0.08em; text-transform: uppercase;">Active Brands</div>
+    </div>
+    <div>
+      <div style="font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff; line-height: 1;">4</div>
+      <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 6px; letter-spacing: 0.08em; text-transform: uppercase;">Food Categories</div>
+    </div>
+    <div>
+      <div style="font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff; line-height: 1;">D2C</div>
+      <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 6px; letter-spacing: 0.08em; text-transform: uppercase;">Native Model</div>
+    </div>
+    <div>
+      <div style="font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff; line-height: 1;">🇮🇳</div>
+      <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 6px; letter-spacing: 0.08em; text-transform: uppercase;">Pan-India Reach</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section id="portfolio" style="padding: 96px 48px;">
+  <div style="max-width: 1080px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 64px;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5a9a2e; margin-bottom: 16px;">Our Portfolio</div>
+      <h2 style="font-family: 'DM Serif Display', serif; font-size: 44px; color: #111; letter-spacing: -0.02em; line-height: 1.1;">Brands built to last</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;">
+
+      <!-- Tropico Nuts -->
+      <div style="background: #fff; border-radius: 20px; padding: 40px; border: 1px solid rgba(0,0,0,0.06); transition: box-shadow 0.2s;" style-hover="box-shadow: 0 12px 40px rgba(0,0,0,0.10);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px;">
+          <img src="uploads/tropico%20nuts.png" alt="Tropico Nuts" style="height: 56px; object-fit: contain; object-position: left;" />
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7240; background: rgba(138,114,64,0.08); padding: 5px 12px; border-radius: 100px;">Nuts &amp; Snacks</span>
+        </div>
+        <p style="font-size: 15px; color: #444; line-height: 1.65; margin-bottom: 28px;">Premium cashews &amp; nuts in 24 bold flavours — roasted, not fried. Positioned at the intersection of indulgence and nutrition for the modern Indian snacker.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #8a7240; flex-shrink: 0;"></span>24 SKUs across premium flavour variants
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #8a7240; flex-shrink: 0;"></span>Roasted-not-fried positioning — clean label
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #8a7240; flex-shrink: 0;"></span>Strong D2C website with direct checkout
+          </div>
+        </div>
+        <a href="https://tropiconuts.vercel.app/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #8a7240;">
+          Visit brand
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5l7-7M3 2.5h6.5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Organic Cabana -->
+      <div style="background: #fff; border-radius: 20px; padding: 40px; border: 1px solid rgba(0,0,0,0.06);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px;">
+          <img src="uploads/organic%20cabana.png" alt="Organic Cabana" style="height: 56px; object-fit: contain; object-position: left;" />
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #3d7a14; background: rgba(61,122,20,0.08); padding: 5px 12px; border-radius: 100px;">Organic Staples</span>
+        </div>
+        <p style="font-size: 15px; color: #444; line-height: 1.65; margin-bottom: 28px;">100% pure organic grains, flours &amp; dals with USDA certification. Nine-plus years of farm-to-kitchen trust built with families across India.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #3d7a14; flex-shrink: 0;"></span>USDA &amp; Jaivik Bharat certified
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #3d7a14; flex-shrink: 0;"></span>Stone-ground, no pesticides, no shortcuts
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #3d7a14; flex-shrink: 0;"></span>9+ years of customer loyalty, pan-India delivery
+          </div>
+        </div>
+        <a href="https://organiccabana.growthoriginator.com/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #3d7a14;">
+          Visit brand
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5l7-7M3 2.5h6.5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Medhavat -->
+      <div style="background: #fff; border-radius: 20px; padding: 40px; border: 1px solid rgba(0,0,0,0.06);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px;">
+          <img src="uploads/medhavat.png" alt="Medhavat" style="height: 56px; object-fit: contain; object-position: left;" />
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #a07820; background: rgba(160,120,32,0.08); padding: 5px 12px; border-radius: 100px;">Flours &amp; Mixes</span>
+        </div>
+        <p style="font-size: 15px; color: #444; line-height: 1.65; margin-bottom: 28px;">Wise flours &amp; baking mixes crafted for the health-conscious home cook. Premium wheat, multigrain, and speciality blends with transparent sourcing.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #a07820; flex-shrink: 0;"></span>Speciality &amp; multigrain flour range
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #a07820; flex-shrink: 0;"></span>Health-first formulations, clean ingredients
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #a07820; flex-shrink: 0;"></span>Premium positioning in a commoditised category
+          </div>
+        </div>
+        <a href="https://medhavat.growthoriginator.com/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #a07820;">
+          Visit brand
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5l7-7M3 2.5h6.5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Healthy Mijo -->
+      <div style="background: #fff; border-radius: 20px; padding: 40px; border: 1px solid rgba(0,0,0,0.06);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px;">
+          <img src="uploads/Healthy%20Mijo.png" alt="Healthy Mijo" style="height: 56px; object-fit: contain; object-position: left;" />
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7a4020; background: rgba(122,64,32,0.08); padding: 5px 12px; border-radius: 100px;">Health Foods</span>
+        </div>
+        <p style="font-size: 15px; color: #444; line-height: 1.65; margin-bottom: 28px;">Foods for modern lifestyles — nutritious, convenient, and designed for the urban Indian consumer who refuses to compromise between health and taste.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #7a4020; flex-shrink: 0;"></span>Modern lifestyle &amp; wellness positioning
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #7a4020; flex-shrink: 0;"></span>Targets urban health-first demographics
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #7a4020; flex-shrink: 0;"></span>High repeat-purchase potential in wellness segment
+          </div>
+        </div>
+        <a href="https://healthymijo.growthoriginator.com/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #7a4020;">
+          Visit brand
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5l7-7M3 2.5h6.5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Cafe Firo -->
+      <div style="background: #fff; border-radius: 20px; padding: 40px; border: 1px solid rgba(0,0,0,0.06);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px;">
+          <img src="uploads/Logo.png" alt="Cafe Firo" style="height: 56px; object-fit: contain; object-position: left;" />
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8b1a1a; background: rgba(139,26,26,0.08); padding: 5px 12px; border-radius: 100px;">Ready to Cook</span>
+        </div>
+        <p style="font-size: 15px; color: #444; line-height: 1.65; margin-bottom: 28px;">Easy to cook, delicious to share. Cafe Firo brings restaurant-quality meals into the home kitchen with minimal effort and maximum flavour.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #8b1a1a; flex-shrink: 0;"></span>Ready-to-cook &amp; convenience food category
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #8b1a1a; flex-shrink: 0;"></span>Taps India's fastest-growing food segment
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #8b1a1a; flex-shrink: 0;"></span>Social-first brand built for sharing moments
+          </div>
+        </div>
+        <a href="https://cafefiro.tenskywholesale.com/CafeFiro.html" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #8b1a1a;">
+          Visit brand
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5l7-7M3 2.5h6.5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Farm Puro -->
+      <div style="background: #fff; border-radius: 20px; padding: 40px; border: 1px solid rgba(0,0,0,0.06);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px;">
+          <img src="uploads/farmpuro-logo.png" alt="Farm Puro" style="height: 56px; object-fit: contain; object-position: left;" />
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1a5c28; background: rgba(26,92,40,0.08); padding: 5px 12px; border-radius: 100px;">Farm Fresh</span>
+        </div>
+        <p style="font-size: 15px; color: #444; line-height: 1.65; margin-bottom: 28px;">India's food, pure and simple. Farm Puro delivers purity-assured produce straight from Indian farms — traceable, honest, and built on farmer trust.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #1a5c28; flex-shrink: 0;"></span>Direct farm-to-consumer supply chain
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #1a5c28; flex-shrink: 0;"></span>Purity-assured &amp; traceable sourcing
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #333;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #1a5c28; flex-shrink: 0;"></span>Celebrates Indian agricultural heritage
+          </div>
+        </div>
+        <a href="https://farmpuro.tenskywholesale.com/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #1a5c28;">
+          Visit brand
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5l7-7M3 2.5h6.5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY INVEST -->
+<section style="background: #f0ede6; padding: 96px 48px;">
+  <div style="max-width: 960px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 64px;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5a9a2e; margin-bottom: 16px;">The Opportunity</div>
+      <h2 style="font-family: 'DM Serif Display', serif; font-size: 40px; color: #111; letter-spacing: -0.02em;">Why Growth Originator?</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="background: #fff; border-radius: 16px; padding: 32px;">
+        <div style="font-size: 32px; margin-bottom: 16px;">🌾</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 20px; margin-bottom: 12px; color: #111;">Portfolio Diversification</h3>
+        <p style="font-size: 14px; color: #666; line-height: 1.7;">Six brands spanning snacks, organics, flours, health foods, ready-to-cook, and farm produce — de-risked exposure across India's food economy.</p>
+      </div>
+      <div style="background: #fff; border-radius: 16px; padding: 32px;">
+        <div style="font-size: 32px; margin-bottom: 16px;">📈</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 20px; margin-bottom: 12px; color: #111;">D2C-Native Playbook</h3>
+        <p style="font-size: 14px; color: #666; line-height: 1.7;">Every brand is built with direct-to-consumer architecture — owned storefronts, direct customer data, and full margin control without retail middlemen.</p>
+      </div>
+      <div style="background: #fff; border-radius: 16px; padding: 32px;">
+        <div style="font-size: 32px; margin-bottom: 16px;">🇮🇳</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 20px; margin-bottom: 12px; color: #111;">India's Food Moment</h3>
+        <p style="font-size: 14px; color: #666; line-height: 1.7;">India's branded food market is at an inflection point. Health-conscious urban consumers are trading up from commodity to trusted, story-driven brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" style="background: #1a1a1a; padding: 100px 48px; text-align: center;">
+  <div style="max-width: 560px; margin: 0 auto;">
+    <img src="uploads/GO.jpg" alt="Growth Originator" style="height: 48px; object-fit: contain; margin-bottom: 36px; filter: brightness(0) invert(1);" />
+    <h2 style="font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff; margin-bottom: 20px; letter-spacing: -0.02em; line-height: 1.1;">Ready to be part of India's food story?</h2>
+    <p style="font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 44px;">We're selectively partnering with investors who share our belief in building India's next generation of trusted food brands.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+      <a href="https://wa.me/919667395418?text=Hi%2C%20I%20am%20interested%20in%20knowing%20more%20about%20your%20D2C%20Brands" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: #fff; font-size: 15px; font-weight: 600; padding: 16px 32px; border-radius: 100px; letter-spacing: 0.01em;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.847L.057 23.428a.75.75 0 0 0 .915.915l5.624-1.474A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.504-5.23-1.385l-.374-.22-3.88 1.017 1.034-3.772-.242-.389A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #111; padding: 24px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.06);">
+  <p style="font-size: 12px; color: rgba(255,255,255,0.25);">© 2025 Growth Originator. All rights reserved.</p>
+  <div style="display: flex; gap: 24px;">
+    <a href="https://tropiconuts.vercel.app/" target="_blank" style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; font-weight: 500;">Tropico Nuts</a>
+    <a href="https://organiccabana.growthoriginator.com/" target="_blank" style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; font-weight: 500;">Organic Cabana</a>
+    <a href="https://medhavat.growthoriginator.com/" target="_blank" style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; font-weight: 500;">Medhavat</a>
+    <a href="https://healthymijo.growthoriginator.com/" target="_blank" style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; font-weight: 500;">Healthy Mijo</a>
+    <a href="https://cafefiro.tenskywholesale.com/CafeFiro.html" target="_blank" style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; font-weight: 500;">Cafe Firo</a>
+    <a href="https://farmpuro.tenskywholesale.com/" target="_blank" style="font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; font-weight: 500;">Farm Puro</a>
+  </div>
+</footer>
+</x-dc>
+</body>
+</html>
